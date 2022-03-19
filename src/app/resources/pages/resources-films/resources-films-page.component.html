@@ -1,0 +1,12 @@
+<div class="card m-3 mt-5">
+  <div class="card-body">
+    <h5 class="card-title">Films</h5>
+    <label *ngIf="!componentReady">Loading...</label>
+    <div class="card-text cotainer-fluid" *ngIf="data$|async as items">
+        <div class="row" *ngFor="let item of items">
+          {{item.title}} / {{item.director}} / {{item.release_date}} <a routerLink="#">more details</a>
+            <!-- <div class="col-xs-12 col-sm-4 col-md-2" ></div> -->
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.menunav {
+    overflow: hidden;
+    background-color: #fcfcfc;
+  }
+  .menunav a {
+    float: left;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .menunav a:hover {
+    background-color: rgb(236, 233, 233);
+    color: #000;
+  }
+  .menunav a.active {
+    background-color: #2196f3;
+    color: #fff;
+  }

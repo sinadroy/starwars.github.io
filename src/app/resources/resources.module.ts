@@ -2,12 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ResourcesRoutingModule } from './resources-routing.module';
-import { ResourcesFilmsPageComponent } from './pages/resources-films-page.component';
+import { ResourcesMainPageComponent } from './pages/main/resources-main-page.component';
+import { ResourcesFilmsPageComponent } from './pages/resources-films/resources-films-page.component';
+import { ResourcesMenuComponent } from './components/resources-menu/resources-menu.component';
 
 
 @NgModule({
   declarations: [
-    ResourcesFilmsPageComponent
+    ResourcesMainPageComponent,
+    ResourcesFilmsPageComponent,
+    ResourcesMenuComponent
   ],
   imports: [
     CommonModule,

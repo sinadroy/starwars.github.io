@@ -1,21 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ResourcesFilmsPageComponent } from './pages/resources-films-page.component';
+import { ResourcesMainPageComponent } from './pages/main/resources-main-page.component';
+import { ResourcesFilmsPageComponent } from './pages/resources-films/resources-films-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ResourcesFilmsPageComponent,
+    component: ResourcesMainPageComponent,
+    children: [
+      {
+        path: 'films',
+        component: ResourcesFilmsPageComponent,
+      },
+      {
+        path: '**',
+        redirectTo: '',
+        pathMatch: 'full',
+      },
+    ]
   },
-  {
-    path: 'films',
-    component: ResourcesFilmsPageComponent,
-  },
-  {
-    path: '**',
-    redirectTo: 'films',
-    pathMatch: 'full',
-  },
+  
 ];
 
 @NgModule({
