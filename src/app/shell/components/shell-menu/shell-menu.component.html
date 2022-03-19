@@ -1,6 +1,0 @@
-<div class="container-fluid mt-5">
-    <label *ngIf="!componentReady">Loading...</label>
-    <div class="menunav" *ngIf="menuData$ | async as items">
-      <a *ngFor="let item of items | keyvalue" (click)="routeToResource(item.key)">{{item.key | titlecase}}</a>
-    </div>
-</div>
